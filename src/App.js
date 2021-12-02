@@ -1,13 +1,13 @@
-import Header from "./Header"
+import Header from "./components/Header"
 import NavBar from "./components/NavBar"
-import "d:/react proyectos/proyecto1/node_modules/bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/css/bootstrap.min.css";
 
 
 
 function App () {
     return (
         <>
-        <link rel="stylesheet" href="estilos" />
+            <Header/>
             <NavBar/>
          
         </>

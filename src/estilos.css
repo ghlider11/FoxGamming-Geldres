@@ -1,5 +1,18 @@
 body {
-    /* background-color: red; */
+     background-color:#34495E;
+}
+h1.titulo{
+  text-align: center;
+  color:#ECF0F1;
+}
+img.fox{
+  width: 200px;
+  height: 200px;
+  display:block;
+  margin:auto;
+  height: 100%;
+ 
+
 }
 /*
 ul {
