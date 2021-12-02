@@ -8,7 +8,7 @@ const NavBar = () => {
 
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                <Navbar.Brand href="#home"><img src="logo192.png" alt="" width="30" height="24" />React-Bootstrap</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
