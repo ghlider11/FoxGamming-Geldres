@@ -10,5 +10,8 @@ import App from "./App"
 
 import "./estilos.css"
 
+
+
 //4) Necesitmos dibujar la aplicacion en el DOM
+
 ReactDOM.render( <App/> ,document.getElementById("root"))
