@@ -1,20 +1,38 @@
 import Header from "./components/Header/Header"
 import NavBar from "./components/NavBar/NavBar"
-import Itemlistcontainer from "./components/Itemlistcontainer"
+import Itemlistcontainer from "./components/ItemCount/Itemlistcontainer"
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import React, { useState } from "react";
-import Person from "./components/Person";
+
+
+
+
 
 
 
 function App() {
-    const imagenes = [
+   
+
+    const links = [
+        { href: "#", name: "inicio", id: 1 },
+        { href: "#", name: "Productos", id: 2 },
+        { href: "#", name: "Contactos", id: 3 },
+        { href: "#", name: "Carrito", id: 4 }
+    ]
+
+    const foo = () => {
+        console.log("soy foo")
+    }
+
+ 
+    
+    const productos = [
         {
             id: 1,
             src: 's',
             alt: 'Gatitos, no se puede decir más',
             nombre: 'Artículo 1',
+            stock: 10,
             precio: 52
         },
         {
@@ -33,33 +51,16 @@ function App() {
         },
     ];
 
-    const [persons, setPersons] = useState([
-        {
-            id: 1,
-            name: "Kevin",
-            role: "Frontend Developer",
-            img: "https://bootdey.com/img/Content/avatar/avatar2.png",
-        },
-        {
-            id: 2,
-            name: "Alex",
-            role: "Backend Developer",
-            img: "https://bootdey.com/img/Content/avatar/avatar3.png",
-        },
-        {
-            id: 3,
-            name: "Ben",
-            role: "Designer",
-            img: "https://bootdey.com/img/Content/avatar/avatar4.png",
-        },
-    ]);
-
+   
     return (
         <>
-            <Header nombre="horacio" />
+            <Header nombre={"E-Commerce"} edad={1} links={links} foo={foo}>
+                <p>Hola</p>
+                <p>Hola</p>
+            </Header>
             <NavBar />
-            <Itemlistcontainer gretting="Hola mundo, este es mi proyecto de e-commerce"/>
             
+            <Itemlistcontainer gretting="Hola mundo, este es mi proyecto de e-commerce"links={links}/>
 
         </>
     )

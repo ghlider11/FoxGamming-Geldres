@@ -10,6 +10,12 @@ p.grett{
   text-align: center;
   
 }
+main.main{
+  color: #ECF0F1;
+}
+p.contador{
+  color:#ECF0F1;
+}
 img.fox{
   width: 200px;
   height: 200px;
