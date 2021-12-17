@@ -2,7 +2,7 @@ import React from "react"
 import { useState } from "react"
 import "./ItemCount.css"
 
-const ItemCount = ({ stock, initial, onAdd }) => {
+const ItemCount = ({ stock, initial, onAdd,links }) => {
 
     let [contador, setContador] = useState(0)
 
@@ -39,6 +39,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
                     <button onClick={restar}>RESTAR</button>
                
                 <button onClick={onAdd}>Agregar</button>
+                
 
         </>
 

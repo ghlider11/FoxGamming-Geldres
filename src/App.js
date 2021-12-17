@@ -1,14 +1,7 @@
 import Header from "./components/Header/Header"
 import NavBar from "./components/NavBar/NavBar"
-import Itemlistcontainer from "./components/ItemCount/Itemlistcontainer"
+import Itemlistcontainer from "./components/Items/Itemlistcontainer";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-
-
-
-
-
-
 
 function App() {
    
@@ -60,7 +53,7 @@ function App() {
             </Header>
             <NavBar />
             
-            <Itemlistcontainer gretting="Hola mundo, este es mi proyecto de e-commerce"links={links}/>
+            <Itemlistcontainer gretting={"Hola mundo, este es mi proyecto de e-commerce"} links={links}/>
 
         </>
     )
