@@ -7,8 +7,8 @@ const ItemDetail = ({lista}) => {
     return (
         <article className={styles.detailtitle}>
             <h3>DETALLE</h3>
-            <h3>Nombre: {lista[0].description}</h3>
-            <h3>Precio : ${lista[0].price}</h3>
+            <h3>Nombre: {lista.description}</h3>
+            <h3>Precio : ${lista.price}</h3>
             
         </article>
     )

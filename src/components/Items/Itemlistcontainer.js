@@ -1,6 +1,7 @@
 import ItemCount from "./ItemCount"
 import { useState , useEffect } from "react"
 import ItemList from "./ItemList";
+import ItemDetailContainer from "./ItemDetailContainer";
 
 const onAdd = ()=>{
     console.log("Producto agregado")
@@ -188,6 +189,7 @@ const Itemlistcontainer = ({gretting}) => {
 
             </main>
             <ItemList lista={lista}/>
+            <ItemDetailContainer/>
 
 
 

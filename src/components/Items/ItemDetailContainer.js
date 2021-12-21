@@ -4,15 +4,15 @@ import ItemList from "./ItemList";
 import ItemDetail from "./ItemDetail";
 
 const productosIniciales = 
-    [{  id: 1,
+    {  id: 1,
         title: 'Laptop',
         description: 'LAPTOP 2-EN-1 ADVANCE CN4050',
         price: 'S/.950.00',
         pictureUrl: 'url',
-         }]
+         }
 
 const ItemDetailContainer = () =>{
-    let [lista, setLista] = useState([])
+    let [lista, setLista] = useState({})
 
     useEffect(()=>{
 

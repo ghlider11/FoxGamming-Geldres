@@ -55,7 +55,7 @@ function App() {
             <NavBar />
             
             <Itemlistcontainer gretting={"Hola mundo, este es mi proyecto de e-commerce"} links={links}/>
-            <ItemDetailContainer/>
+            
 
         </>
     )
