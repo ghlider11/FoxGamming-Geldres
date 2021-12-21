@@ -2,6 +2,7 @@ import Header from "./components/Header/Header"
 import NavBar from "./components/NavBar/NavBar"
 import Itemlistcontainer from "./components/Items/Itemlistcontainer";
 import "bootstrap/dist/css/bootstrap.min.css";
+import ItemDetailContainer from "./components/Items/ItemDetailContainer";
 
 function App() {
    
@@ -54,6 +55,7 @@ function App() {
             <NavBar />
             
             <Itemlistcontainer gretting={"Hola mundo, este es mi proyecto de e-commerce"} links={links}/>
+            <ItemDetailContainer/>
 
         </>
     )

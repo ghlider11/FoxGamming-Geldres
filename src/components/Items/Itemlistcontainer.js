@@ -31,6 +31,126 @@ const products = [
         pictureUrl: 'url',
         
     },
+    {
+        id: 4,
+        title: 'Laptop',
+        description: 'LAPTOP 2-EN-1 ADVANCE CN4050',
+        price: 'S/.950.00',
+        pictureUrl: 'url',
+        
+    },
+    {
+        id: 5,
+        title: 'Laptop',
+        description: 'CHROMEBOOK LENOVO S330',
+        price: 'S/.1310.00',
+        pictureUrl: 'url',
+        
+    },
+    {
+        id: 6,
+        title: 'Laptop',
+        description: 'LAPTOP HP 240 G7, 14" HD',
+        price: 'S/.1670.00',
+        pictureUrl: 'url',
+        
+    },
+    {
+        id: 7,
+        title: 'Laptop',
+        description: 'LAPTOP 2-EN-1 ADVANCE CN4050',
+        price: 'S/.950.00',
+        pictureUrl: 'url',
+        
+    },
+    {
+        id: 8,
+        title: 'Laptop',
+        description: 'CHROMEBOOK LENOVO S330',
+        price: 'S/.1310.00',
+        pictureUrl: 'url',
+        
+    },
+    {
+        id: 9,
+        title: 'Laptop',
+        description: 'LAPTOP HP 240 G7, 14" HD',
+        price: 'S/.1670.00',
+        pictureUrl: 'url',
+        
+    },
+    {
+        id: 10,
+        title: 'Laptop',
+        description: 'LAPTOP 2-EN-1 ADVANCE CN4050',
+        price: 'S/.950.00',
+        pictureUrl: 'url',
+        
+    },
+    {
+        id: 11,
+        title: 'Laptop',
+        description: 'CHROMEBOOK LENOVO S330',
+        price: 'S/.1310.00',
+        pictureUrl: 'url',
+        
+    },
+    {
+        id: 12,
+        title: 'Laptop',
+        description: 'LAPTOP HP 240 G7, 14" HD',
+        price: 'S/.1670.00',
+        pictureUrl: 'url',
+        
+    },
+    {
+        id: 13,
+        title: 'Laptop',
+        description: 'LAPTOP 2-EN-1 ADVANCE CN4050',
+        price: 'S/.950.00',
+        pictureUrl: 'url',
+        
+    },
+    {
+        id: 14,
+        title: 'Laptop',
+        description: 'CHROMEBOOK LENOVO S330',
+        price: 'S/.1310.00',
+        pictureUrl: 'url',
+        
+    },
+    {
+        id: 15,
+        title: 'Laptop',
+        description: 'LAPTOP HP 240 G7, 14" HD',
+        price: 'S/.1670.00',
+        pictureUrl: 'url',
+        
+    },
+    {
+        id: 16,
+        title: 'Laptop',
+        description: 'LAPTOP 2-EN-1 ADVANCE CN4050',
+        price: 'S/.950.00',
+        pictureUrl: 'url',
+        
+    },
+    {
+        id: 17,
+        title: 'Laptop',
+        description: 'CHROMEBOOK LENOVO S330',
+        price: 'S/.1310.00',
+        pictureUrl: 'url',
+        
+    },
+    {
+        id: 18,
+        title: 'Laptop',
+        description: 'LAPTOP HP 240 G7, 14" HD',
+        price: 'S/.1670.00',
+        pictureUrl: 'url',
+        
+    },
     
 ];
 
@@ -64,7 +184,7 @@ const Itemlistcontainer = ({gretting}) => {
                 
                <p className="grett"> {gretting} </p>
                 
-                <ItemCount stock={5} initial={0} onAdd={onAdd}></ItemCount>
+                <ItemCount stock={5} initial={1} onAdd={onAdd}></ItemCount>
 
             </main>
             <ItemList lista={lista}/>

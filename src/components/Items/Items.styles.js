@@ -21,11 +21,16 @@ const useStyles = createUseStyles({
     borderRadius: 3
   },
   title: {
-    fontSize: 14
+    fontSize: 14,
+    
   },
   price: {
     fontSize: 10,
     fontWeight: "bold"
+  },
+  detailtitle:{
+    fontSize: 10,
+    color:"white"
   }
 });
 

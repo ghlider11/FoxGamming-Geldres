@@ -10,12 +10,6 @@ const Item = ({ item }) => {
                 <button>ver detalle</button>
             </li>
 
-
-
-
-
-
-
     )
 
 }
