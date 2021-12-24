@@ -3,7 +3,8 @@ body {
 }
 h1.titulo{
   text-align: center;
-  color:#ECF0F1;
+ color : black;
+  text-decoration: none;
 }
 p.grett{
   color: #ECF0F1;
@@ -24,6 +25,18 @@ img.fox{
   height: 100%;
  
 
+}
+nav{
+  margin: 50px;
+  color: antiquewhite;
+}
+nav a {
+
+      color : black;
+      text-decoration: none;
+      margin-left: 16px;
+      font-size: 50px;
+  
 }
 /*
 ul {

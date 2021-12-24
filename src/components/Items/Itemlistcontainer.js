@@ -2,7 +2,7 @@ import ItemCount from "./ItemCount"
 import { useState , useEffect } from "react"
 import ItemList from "./ItemList";
 import ItemDetailContainer from "./ItemDetailContainer";
-
+import { useParams } from "react-router-dom"
 const onAdd = ()=>{
     console.log("Producto agregado")
 }
@@ -13,7 +13,7 @@ const products = [
         title: 'Laptop',
         description: 'LAPTOP 2-EN-1 ADVANCE CN4050',
         price: 'S/.950.00',
-        pictureUrl: 'url',
+        pictureUrl: 'laptop2 lenovo.PNG',
         
     },
     {
@@ -21,7 +21,7 @@ const products = [
         title: 'Laptop',
         description: 'CHROMEBOOK LENOVO S330',
         price: 'S/.1310.00',
-        pictureUrl: 'url',
+        pictureUrl: 'laptop3hp.PNG',
         
     },
     {
@@ -29,7 +29,7 @@ const products = [
         title: 'Laptop',
         description: 'LAPTOP HP 240 G7, 14" HD',
         price: 'S/.1670.00',
-        pictureUrl: 'url',
+        pictureUrl: 'laptop 1.PNG',
         
     },
     {
@@ -37,7 +37,7 @@ const products = [
         title: 'Laptop',
         description: 'LAPTOP 2-EN-1 ADVANCE CN4050',
         price: 'S/.950.00',
-        pictureUrl: 'url',
+        pictureUrl: 'laptop2 lenovo.PNG',
         
     },
     {
@@ -45,7 +45,7 @@ const products = [
         title: 'Laptop',
         description: 'CHROMEBOOK LENOVO S330',
         price: 'S/.1310.00',
-        pictureUrl: 'url',
+        pictureUrl: 'laptop3hp.PNG',
         
     },
     {
@@ -53,7 +53,7 @@ const products = [
         title: 'Laptop',
         description: 'LAPTOP HP 240 G7, 14" HD',
         price: 'S/.1670.00',
-        pictureUrl: 'url',
+        pictureUrl: 'laptop 1.PNG',
         
     },
     {
@@ -61,7 +61,7 @@ const products = [
         title: 'Laptop',
         description: 'LAPTOP 2-EN-1 ADVANCE CN4050',
         price: 'S/.950.00',
-        pictureUrl: 'url',
+        pictureUrl: 'laptop3hp.PNG',
         
     },
     {
@@ -69,7 +69,7 @@ const products = [
         title: 'Laptop',
         description: 'CHROMEBOOK LENOVO S330',
         price: 'S/.1310.00',
-        pictureUrl: 'url',
+        pictureUrl: 'laptop2 lenovo.PNG',
         
     },
     {
@@ -77,7 +77,7 @@ const products = [
         title: 'Laptop',
         description: 'LAPTOP HP 240 G7, 14" HD',
         price: 'S/.1670.00',
-        pictureUrl: 'url',
+        pictureUrl: 'laptop 1.PNG',
         
     },
     {
@@ -85,7 +85,7 @@ const products = [
         title: 'Laptop',
         description: 'LAPTOP 2-EN-1 ADVANCE CN4050',
         price: 'S/.950.00',
-        pictureUrl: 'url',
+        pictureUrl: 'laptop3hp.PNG',
         
     },
     {
@@ -93,7 +93,7 @@ const products = [
         title: 'Laptop',
         description: 'CHROMEBOOK LENOVO S330',
         price: 'S/.1310.00',
-        pictureUrl: 'url',
+        pictureUrl: 'laptop2 lenovo.PNG',
         
     },
     {
@@ -101,7 +101,7 @@ const products = [
         title: 'Laptop',
         description: 'LAPTOP HP 240 G7, 14" HD',
         price: 'S/.1670.00',
-        pictureUrl: 'url',
+        pictureUrl: '/laptop 1.PNG',
         
     },
     {
@@ -109,7 +109,7 @@ const products = [
         title: 'Laptop',
         description: 'LAPTOP 2-EN-1 ADVANCE CN4050',
         price: 'S/.950.00',
-        pictureUrl: 'url',
+        pictureUrl: 'laptop2 lenovo.PNG',
         
     },
     {
@@ -117,7 +117,7 @@ const products = [
         title: 'Laptop',
         description: 'CHROMEBOOK LENOVO S330',
         price: 'S/.1310.00',
-        pictureUrl: 'url',
+        pictureUrl: 'laptop3hp.PNG',
         
     },
     {
@@ -125,7 +125,7 @@ const products = [
         title: 'Laptop',
         description: 'LAPTOP HP 240 G7, 14" HD',
         price: 'S/.1670.00',
-        pictureUrl: 'url',
+        pictureUrl: 'laptop 1.PNG',
         
     },
     {
@@ -133,7 +133,7 @@ const products = [
         title: 'Laptop',
         description: 'LAPTOP 2-EN-1 ADVANCE CN4050',
         price: 'S/.950.00',
-        pictureUrl: 'url',
+        pictureUrl: 'laptop3hp.PNG',
         
     },
     {
@@ -141,7 +141,7 @@ const products = [
         title: 'Laptop',
         description: 'CHROMEBOOK LENOVO S330',
         price: 'S/.1310.00',
-        pictureUrl: 'url',
+        pictureUrl: 'laptop2 lenovo.PNG',
         
     },
     {
@@ -149,7 +149,7 @@ const products = [
         title: 'Laptop',
         description: 'LAPTOP HP 240 G7, 14" HD',
         price: 'S/.1670.00',
-        pictureUrl: 'url',
+        pictureUrl: 'laptop3hp.PNG',
         
     },
     
@@ -158,6 +158,7 @@ const products = [
 const Itemlistcontainer = ({gretting}) => {
 
     let [lista, setLista] = useState([])
+   
 
     useEffect(()=>{
 

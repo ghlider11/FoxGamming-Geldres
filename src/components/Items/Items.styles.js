@@ -8,7 +8,7 @@ const useStyles = createUseStyles({
   itemList: {
     margin:{
         top:10,
-        bottom:5,
+        bottom:100,
         left:4,
         right:5,
     },
@@ -22,6 +22,9 @@ const useStyles = createUseStyles({
   },
   title: {
     fontSize: 14,
+    
+  },verdt: {
+    padding:6
     
   },
   price: {
