@@ -7,16 +7,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import Carrito from "./components/Carrito";
-
+import productoss from "./components/productoss.json"
 function App() {
 
 
-    const linkds = [
-        { href: "#", name: "inicio", id: 1 },
-        { href: "#", name: "Productos", id: 2 },
-        { href: "#", name: "Contactos", id: 3 },
-        { href: "#", name: "Carrito", id: 4 }
-    ]
     const links = [
         { href: "/productos", name: "productos", id: 1 },
         { href: "/categoria/Laptops", name: "Laptops", id: 2 },
@@ -29,30 +23,154 @@ function App() {
 
 
 
-    const productos = [
-        {
-            id: 1,
-            src: 's',
-            alt: 'Gatitos, no se puede decir más',
-            nombre: 'Artículo 1',
-            stock: 10,
-            precio: 52
-        },
-        {
-            id: 2,
-            src: 's',
-            alt: 'Gatitos, no se puede decir más',
-            nombre: 'Artículo 2',
-            precio: 82
-        },
-        {
-            id: 3,
-            src: 's',
-            alt: 'Gatitos, no se puede decir más',
-            nombre: 'Artículo 3',
-            precio: 99
-        },
-    ];
+const products = [
+    {
+        id: 1,
+        title: 'Laptop',
+        description: 'LAPTOP 2-EN-1 ADVANCE CN4050',
+        price: 'S/.950.00',
+        pictureUrl: 'laptop2 lenovo.PNG',
+        
+    },
+    {
+        id: 2,
+        title: 'Laptop',
+        description: 'CHROMEBOOK LENOVO S330',
+        price: 'S/.1310.00',
+        pictureUrl: 'laptop3hp.PNG',
+        
+    },
+    {
+        id: 3,
+        title: 'Laptop',
+        description: 'LAPTOP HP 240 G7, 14" HD',
+        price: 'S/.1670.00',
+        pictureUrl: 'laptop 1.PNG',
+        
+    },
+    {
+        id: 4,
+        title: 'Laptop',
+        description: 'LAPTOP 2-EN-1 ADVANCE CN4050',
+        price: 'S/.950.00',
+        pictureUrl: 'laptop2 lenovo.PNG',
+        
+    },
+    {
+        id: 5,
+        title: 'Laptop',
+        description: 'CHROMEBOOK LENOVO S330',
+        price: 'S/.1310.00',
+        pictureUrl: 'laptop3hp.PNG',
+        
+    },
+    {
+        id: 6,
+        title: 'Laptop',
+        description: 'LAPTOP HP 240 G7, 14" HD',
+        price: 'S/.1670.00',
+        pictureUrl: 'laptop 1.PNG',
+        
+    },
+    {
+        id: 7,
+        title: 'Laptop',
+        description: 'LAPTOP 2-EN-1 ADVANCE CN4050',
+        price: 'S/.950.00',
+        pictureUrl: 'laptop3hp.PNG',
+        
+    },
+    {
+        id: 8,
+        title: 'Laptop',
+        description: 'CHROMEBOOK LENOVO S330',
+        price: 'S/.1310.00',
+        pictureUrl: 'laptop2 lenovo.PNG',
+        
+    },
+    {
+        id: 9,
+        title: 'Laptop',
+        description: 'LAPTOP HP 240 G7, 14" HD',
+        price: 'S/.1670.00',
+        pictureUrl: 'laptop 1.PNG',
+        
+    },
+    {
+        id: 10,
+        title: 'Laptop',
+        description: 'LAPTOP 2-EN-1 ADVANCE CN4050',
+        price: 'S/.950.00',
+        pictureUrl: 'laptop3hp.PNG',
+        
+    },
+    {
+        id: 11,
+        title: 'Laptop',
+        description: 'CHROMEBOOK LENOVO S330',
+        price: 'S/.1310.00',
+        pictureUrl: 'laptop2 lenovo.PNG',
+        
+    },
+    {
+        id: 12,
+        title: 'Laptop',
+        description: 'LAPTOP HP 240 G7, 14" HD',
+        price: 'S/.1670.00',
+        pictureUrl: '/laptop 1.PNG',
+        
+    },
+    {
+        id: 13,
+        title: 'Laptop',
+        description: 'LAPTOP 2-EN-1 ADVANCE CN4050',
+        price: 'S/.950.00',
+        pictureUrl: 'laptop2 lenovo.PNG',
+        
+    },
+    {
+        id: 14,
+        title: 'Laptop',
+        description: 'CHROMEBOOK LENOVO S330',
+        price: 'S/.1310.00',
+        pictureUrl: 'laptop3hp.PNG',
+        
+    },
+    {
+        id: 15,
+        title: 'Laptop',
+        description: 'LAPTOP HP 240 G7, 14" HD',
+        price: 'S/.1670.00',
+        pictureUrl: 'laptop 1.PNG',
+        
+    },
+    {
+        id: 16,
+        title: 'Laptop',
+        description: 'LAPTOP 2-EN-1 ADVANCE CN4050',
+        price: 'S/.950.00',
+        pictureUrl: 'laptop3hp.PNG',
+        
+    },
+    {
+        id: 17,
+        title: 'Laptop',
+        description: 'CHROMEBOOK LENOVO S330',
+        price: 'S/.1310.00',
+        pictureUrl: 'laptop2 lenovo.PNG',
+        
+    },
+    {
+        id: 18,
+        title: 'Laptop',
+        description: 'LAPTOP HP 240 G7, 14" HD',
+        price: 'S/.1670.00',
+        pictureUrl: 'laptop3hp.PNG',
+        
+    },
+    
+];
+
 
 
     return (
@@ -63,13 +181,14 @@ function App() {
             <Header nombre={"E-Commerce"} edad={1} links={links} foo={foo} />
 
 
-            <main>
+            <main className="mainfo">
                 <Routes>
                     <Route path="/" element={<Home/>} />
-                    <Route path="/productos" element={<Itemlistcontainer gretting={"Hola mundo, este es mi proyecto de e-commerce"} links={links}/>} />
-                    {/*<Route path="/categoria/:id" element={<Itemlistcontainer greeting={"Bienvenido!"} />} />*/}
-                    <Route path="/item/:id" element={<ItemDetailContainer/>} />
-                    <Route path="/carrito" element={<Carrito />} />    
+                    <Route path="/productos" element={<Itemlistcontainer gretting={"Hola mundo, este es mi proyecto de e-commerce"} links={links} productoss={productoss}/>} />
+                    <Route path="/categoria/:nombre" element={<Itemlistcontainer  greeting={"Bienvenido!"} productoss={productoss} />} />       
+                    <Route path="/carrito" element={<Carrito />} />   
+                    <Route path="/producto/:idd" element={<ItemDetailContainer productoss={productoss} />}   />
+
                 </Routes>
             </main>
             <Footer/>

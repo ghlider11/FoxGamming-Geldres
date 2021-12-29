@@ -1,5 +1,9 @@
 import { Link, NavLink } from "react-router-dom"
 import Cardwidget from "../Cardwidget"
+import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap'
+import NavBar from "../NavBar/NavBar"
+
+
 
 const Header = ({ nombre, links }) => {
 
@@ -15,16 +19,13 @@ const Header = ({ nombre, links }) => {
 
                 <nav>
                     {links.map((elemento, indice) => {
-                        return <NavLink key={elemento.id} to={elemento.href}>{elemento.name}</NavLink>
+                        return <NavLink key={elemento.id} to={elemento.href}> {elemento.name}</NavLink>
                     })}
                     <NavLink to="/carrito">
                         <Cardwidget/>
                     </NavLink>
                 </nav>
             </header>
-
-
-
 
         </>
     )

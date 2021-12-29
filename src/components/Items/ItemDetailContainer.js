@@ -12,36 +12,23 @@ const productosIniciales =
     pictureUrl: 'url',
 }
 
-const ItemDetailContainer = () => {
-    let [lista, setLista] = useState({})
-    /*const { id } = useParams();*/
-    useEffect(() => {
+const ItemDetailContainer = ({productoss}) => {
+    let [lista, setLista] = useState([])
+    let { idd } = useParams();
+    console.log(idd);
 
-        const promesa = new Promise((res, rej) => {
-            setTimeout(() => {
-                res(productosIniciales)
-            }, 2000)
+    const getItem = () =>{
+        const promesa = new Promise(res =>{
+            setTimeout(()=>{
+                res(productoss.find(prod=>prod.id===idd));
+            }, 2000);
+        });
+        promesa.then((prod) =>{
+            setLista(prod);
         })
-
-        promesa
-            .then((productos) => {
-                console.log("Todo bien")
-                setLista(productos)
-            })
-            .catch(() => {
-                console.log("Todo mal")
-            })
-
-    }, [])
-
-   {/*function filteredData() {
-        const filteredProducts = lista.filter((lista) =>
-            lista.id.includes(id)
-        );
-   return filteredProducts;} 
-    const result = filteredData(product);
-    console.log(result);*/ 
     }
+    useEffect(() => getItem(), [idd])
+    
     return (
         <div>
             <ItemDetail lista={lista} />

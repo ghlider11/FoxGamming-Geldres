@@ -13,6 +13,12 @@ p.grett{
 }
 main.main{
   color: #ECF0F1;
+
+}
+#mainfo{
+  padding: 1rem;
+  flex-grow: 1;
+  padding: 1rem;
 }
 p.contador{
   color:#ECF0F1;
@@ -37,6 +43,18 @@ nav a {
       margin-left: 16px;
       font-size: 50px;
   
+}
+footer {
+  background-color: black;
+  padding: 0.5rem 0;
+  text-align: center;
+  bottom: 0;
+  color:aliceblue;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
 }
 /*
 ul {
