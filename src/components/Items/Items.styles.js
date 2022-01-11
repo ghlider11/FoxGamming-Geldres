@@ -8,7 +8,7 @@ const useStyles = createUseStyles({
   itemList: {
     margin:{
         top:10,
-        bottom:100,
+        bottom:150,
         left:4,
         right:5,
     },

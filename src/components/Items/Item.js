@@ -6,8 +6,10 @@ const Item = ({ item }) => {
     return (
 
             <li className={styles.itemList}>
+                <h3 className={styles.title}>ID : {item.id}</h3>
                 <h3 className={styles.title}>{item.description}</h3>
                 <p className={styles.price}>Precio : {item.price}</p>
+                <p className={styles.price}>Stock : {item.stock}</p>
                 <img src={item.pictureUrl} alt="thumbnail" />
                 <Link to={`/producto/${item.id}`} className='verdt'>
                 <button >ver detalle</button>

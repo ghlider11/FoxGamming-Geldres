@@ -16,23 +16,21 @@ const Itemlistcontainer = ({productoss},{gretting}) => {
 
     useEffect(()=>{
 
-        const promesa = new Promise((res,rej)=>{
+        const promesa = new Promise((res)=>{
             setTimeout(()=>{
-                if (!nombre) {
-                    res(productoss)
+                if (nombre) {
+                    res(productoss.filter(prod => prod.title === nombre));
                 }else{
-                    res(productoss.filter(prod=>prod.title===nombre));
+                    res(productoss);
                 };
                 
             },2000)
-        })
-        
-
-        promesa.then(prods=>{
+        });
+        promesa.then(prods => {
             setLista(prods);
         })
 
-    },[nombre])
+    },[nombre]);
 
 
     return (

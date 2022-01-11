@@ -4,7 +4,8 @@
         "title": "Laptops",
         "description": "LAPTOP 2-EN-1 ADVANCE CN4050",
         "price": "S/.950.00",
-        "pictureUrl": "laptop2 lenovo.PNG"
+        "stock": "10",
+        "pictureUrl": "/laptop2 lenovo.PNG"
         
     },
     {
@@ -12,7 +13,8 @@
         "title": "Laptops",
         "description": "CHROMEBOOK LENOVO S330",
         "price": "S/.1310.00",
-        "pictureUrl": "laptop3hp.PNG"
+        "stock": "15",
+        "pictureUrl": "/laptop3hp.PNG"
         
     },
     {
@@ -20,7 +22,8 @@
         "title": "Laptops",
         "description": "LAPTOP HP 240 G7, 14' HD",
         "price": "S/.1670.00",
-        "pictureUrl": "laptop 1.PNG"
+        "stock": "10",
+        "pictureUrl": "/laptop 1.PNG"
         
     },
     {
@@ -28,7 +31,8 @@
         "title": "Laptops",
         "description": "LAPTOP 2-EN-1 ADVANCE CN4050",
         "price": "S/.950.00",
-        "pictureUrl": "laptop2 lenovo.PNG"
+        "stock": "15",
+        "pictureUrl": "/laptop2 lenovo.PNG"
         
     },
     {
@@ -36,7 +40,8 @@
         "title": "Laptops",
         "description": "CHROMEBOOK LENOVO S330",
         "price": "S/.1310.00",
-        "pictureUrl": "laptop3hp.PNG"
+        "stock": "10",
+        "pictureUrl": "/laptop3hp.PNG"
         
     },
     {
@@ -44,7 +49,8 @@
         "title": "Laptops",
         "description": "LAPTOP HP 240 G7, 14' HD",
         "price": "S/.1670.00",
-        "pictureUrl": "laptop 1.PNG"
+        "stock": "13",
+        "pictureUrl": "/laptop 1.PNG"
         
     },
     {
@@ -52,7 +58,8 @@
         "title": "Laptops",
         "description": "LAPTOP 2-EN-1 ADVANCE CN4050",
         "price": "S/.950.00",
-        "pictureUrl": "laptop3hp.PNG"
+        "stock": "15",
+        "pictureUrl": "/laptop3hp.PNG"
         
     },
     {
@@ -60,7 +67,8 @@
         "title": "Laptops",
         "description": "CHROMEBOOK LENOVO S330",
         "price": "S/.1310.00",
-        "pictureUrl": "laptop2 lenovo.PNG"
+        "stock": "10",
+        "pictureUrl": "/laptop2 lenovo.PNG"
         
     },
     {
@@ -68,7 +76,8 @@
         "title": "Laptops",
         "description": "LAPTOP HP 240 G7, 14 HD",
         "price": "S/.1670.00",
-        "pictureUrl": "laptop 1.PNG"
+        "stock": "15",
+        "pictureUrl": "/laptop 1.PNG"
         
     },
     {
@@ -76,7 +85,8 @@
         "title": "Laptops",
         "description": "LAPTOP 2-EN-1 ADVANCE CN4050",
         "price": "S/.950.00",
-        "pictureUrl": "laptop3hp.PNG"
+        "stock": "10",
+        "pictureUrl": "/laptop3hp.PNG"
         
     },
     {
@@ -84,7 +94,8 @@
         "title": "Pcs",
         "description": "CHROMEBOOK LENOVO S330",
         "price": "S/.1310.00",
-        "pictureUrl": "laptop2 lenovo.PNG"
+        "stock": "15",
+        "pictureUrl": "/laptop2 lenovo.PNG"
         
     },
     {
@@ -92,55 +103,8 @@
         "title": "Pcs",
         "description": "LAPTOP HP 240 G7, 14 HD",
         "price": "S/.1670.00",
-        "pictureUrl": "laptop 1.PNG"
-        
-    },
-    {
-        "id": "13",
-        "title": "Pcs",
-        "description": "LAPTOP 2-EN-1 ADVANCE CN4050",
-        "price": "S/.950.00",
-        "pictureUrl": "laptop2 lenovo.PNG"
-        
-    },
-    {
-        "id": "14",
-        "title": "Laptops",
-        "description": "CHROMEBOOK LENOVO S330",
-        "price": "S/.1310.00",
-        "pictureUrl": "laptop3hp.PNG"
-        
-    },
-    {
-        "id": "15",
-        "title": "Laptops",
-        "description": "LAPTOP HP 240 G7, 14' HD",
-        "price": "S/.1670.00",
-        "pictureUrl": "laptop 1.PNG"
-        
-    },
-    {
-        "id": "16",
-        "title": "Laptops",
-        "description": "LAPTOP 2-EN-1 ADVANCE CN4050",
-        "price": "S/.950.00",
-        "pictureUrl": "laptop3hp.PNG"
-        
-    },
-    {
-        "id": "17",
-        "title": "Laptops",
-        "description": "CHROMEBOOK LENOVO S330",
-        "price": "S/.1310.00",
-        "pictureUrl": "laptop2 lenovo.PNG"
-        
-    },
-    {
-        "id": "18",
-        "title": "Laptops",
-        "description": "LAPTOP HP 240 G7, 14' HD",
-        "price": "S/.1670.00",
-        "pictureUrl": "laptop3hp.PNG"
+        "stock": "10",
+        "pictureUrl": "/laptop 1.PNG"
         
     }
     
