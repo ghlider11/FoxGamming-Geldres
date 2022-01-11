@@ -11,12 +11,12 @@ const ItemDetail = ({ lista }) => {
     /*let [cantidad, setCantidad] = useState("")*/
     let [mostrar, setMostrar] = useState(false)
 
-    const { agregarAlCarrito} = useContexto()
+    const { addItem} = useContexto()
 
     const onAdd = (cantidad) => {
         
         console.log("cantidad de unidades " + cantidad)
-        agregarAlCarrito(cantidad,lista)
+        addItem(lista,cantidad)
     }
 
     if (mostrar === false) {

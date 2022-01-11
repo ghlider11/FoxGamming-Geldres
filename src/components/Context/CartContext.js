@@ -25,11 +25,11 @@ const CustomProvider = ({children}) => {
     const [cantidad_total,setCantidadTotal] = useState(0)
     const [carrito,setCarrito] = useState([])
 
-    const agregarAlCarrito = (cantidad,producto) => {
+    const addItem = (item,cantidad) => {
         console.log("Soy el provider")
-             console.log(cantidad,producto)
+             console.log(item,cantidad)
 
-                const copia_producto = {...producto}
+                const copia_producto = {...item}
                 copia_producto.cantidad = cantidad
 
         /*const copia = producto.slice(0)
@@ -57,7 +57,7 @@ const CustomProvider = ({children}) => {
     }
     //BORRAR DEL CARRITO
 
-    const borrarDelCarrito = (id) => {
+    const removeItem = (id) => {
         //const nuevo_carrito = ?
         //setCarrito(estadoArray.filter())
         //setCarrito(estadoArray.map())
@@ -65,9 +65,9 @@ const CustomProvider = ({children}) => {
 
     //LIMPIAR CARRITO
 
-    const limpiarCarrito = () => {  setCarrito([])  }
+    const clear = () => {  setCarrito([])  }
 
-    const isInCarrito = (id) => {
+    const isInCart = (id) => {
         //return true ? false
     }
 
@@ -76,9 +76,9 @@ const CustomProvider = ({children}) => {
     const valorDelContexto = {
         cantidad_total , 
         carrito , 
-        agregarAlCarrito , 
-        borrarDelCarrito ,
-        limpiarCarrito
+        addItem , 
+        removeItem ,
+        clear
     }
 
     return (

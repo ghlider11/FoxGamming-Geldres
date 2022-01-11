@@ -8,8 +8,8 @@ const Carrito = () => {
             Soy Carrito
             {carrito.length > 0 ? (
                 <ul>
-                    {carrito.map((producto, indice) => {
-                        return <li key={indice}>{producto.description} - ${producto.price}</li>
+                    {carrito.map((item, indice) => {
+                        return <li key={indice}>{item.description} - ${item.price}</li>
                     })}
                 </ul>
             ) : <p>No hay productos en el carrito</p>}
