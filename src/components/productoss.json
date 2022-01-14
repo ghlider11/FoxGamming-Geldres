@@ -3,8 +3,8 @@
         "id": "1",
         "title": "Laptops",
         "description": "LAPTOP 2-EN-1 ADVANCE CN4050",
-        "price": "S/.950.00",
-        "stock": "10",
+        "price": 950.00,
+        "stock": 10,
         "pictureUrl": "/laptop2 lenovo.PNG"
         
     },
@@ -12,8 +12,8 @@
         "id": "2",
         "title": "Laptops",
         "description": "CHROMEBOOK LENOVO S330",
-        "price": "S/.1310.00",
-        "stock": "15",
+        "price": 1310.00,
+        "stock": 15,
         "pictureUrl": "/laptop3hp.PNG"
         
     },
@@ -21,8 +21,8 @@
         "id": "3",
         "title": "Laptops",
         "description": "LAPTOP HP 240 G7, 14' HD",
-        "price": "S/.1670.00",
-        "stock": "10",
+        "price": 1670.00,
+        "stock": 10,
         "pictureUrl": "/laptop 1.PNG"
         
     },
@@ -30,8 +30,8 @@
         "id": "4",
         "title": "Laptops",
         "description": "LAPTOP 2-EN-1 ADVANCE CN4050",
-        "price": "S/.950.00",
-        "stock": "15",
+        "price": 950.00,
+        "stock": 15,
         "pictureUrl": "/laptop2 lenovo.PNG"
         
     },
@@ -39,8 +39,8 @@
         "id": "5",
         "title": "Laptops",
         "description": "CHROMEBOOK LENOVO S330",
-        "price": "S/.1310.00",
-        "stock": "10",
+        "price": 1310.00,
+        "stock": 10,
         "pictureUrl": "/laptop3hp.PNG"
         
     },
@@ -48,8 +48,8 @@
         "id": "6",
         "title": "Laptops",
         "description": "LAPTOP HP 240 G7, 14' HD",
-        "price": "S/.1670.00",
-        "stock": "13",
+        "price": 1670.00,
+        "stock": 13,
         "pictureUrl": "/laptop 1.PNG"
         
     },
@@ -57,8 +57,8 @@
         "id": "7",
         "title": "Laptops",
         "description": "LAPTOP 2-EN-1 ADVANCE CN4050",
-        "price": "S/.950.00",
-        "stock": "15",
+        "price": 950.00,
+        "stock": 15,
         "pictureUrl": "/laptop3hp.PNG"
         
     },
@@ -66,8 +66,8 @@
         "id": "8",
         "title": "Laptops",
         "description": "CHROMEBOOK LENOVO S330",
-        "price": "S/.1310.00",
-        "stock": "10",
+        "price": 1310.00,
+        "stock": 10,
         "pictureUrl": "/laptop2 lenovo.PNG"
         
     },
@@ -75,8 +75,8 @@
         "id": "9",
         "title": "Laptops",
         "description": "LAPTOP HP 240 G7, 14 HD",
-        "price": "S/.1670.00",
-        "stock": "15",
+        "price": 1670.00,
+        "stock": 15,
         "pictureUrl": "/laptop 1.PNG"
         
     },
@@ -84,8 +84,8 @@
         "id": "10",
         "title": "Laptops",
         "description": "LAPTOP 2-EN-1 ADVANCE CN4050",
-        "price": "S/.950.00",
-        "stock": "10",
+        "price": 950.00,
+        "stock": 10,
         "pictureUrl": "/laptop3hp.PNG"
         
     },
@@ -93,8 +93,8 @@
         "id": "11",
         "title": "Pcs",
         "description": "CHROMEBOOK LENOVO S330",
-        "price": "S/.1310.00",
-        "stock": "15",
+        "price": 1310.00,
+        "stock": 15,
         "pictureUrl": "/laptop2 lenovo.PNG"
         
     },
@@ -102,8 +102,8 @@
         "id": "12",
         "title": "Pcs",
         "description": "LAPTOP HP 240 G7, 14 HD",
-        "price": "S/.1670.00",
-        "stock": "10",
+        "price": 1670.00,
+        "stock": 10,
         "pictureUrl": "/laptop 1.PNG"
         
     }

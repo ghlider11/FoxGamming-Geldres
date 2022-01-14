@@ -24,7 +24,7 @@ const Itemlistcontainer = ({productoss},{gretting}) => {
                     res(productoss);
                 };
                 
-            },2000)
+            },500)
         });
         promesa.then(prods => {
             setLista(prods);
@@ -40,7 +40,7 @@ const Itemlistcontainer = ({productoss},{gretting}) => {
                 
                <p className="grett"> {gretting} </p>
                 
-                <ItemCount stock={5} initial={1} onAdd={onAdd}></ItemCount>
+           
 
             </main>
             <ItemList lista={lista}/>

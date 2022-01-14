@@ -57,7 +57,7 @@ const ItemCount = ({ stock, initial, onAdd,links, setCantidad, setMostrar }) => 
                 
                     <button onClick={restar}>RESTAR</button>
                
-                <Link to={`/Carrito`}> <button onClick={agregarItem}>Agregar</button></Link>
+                    <Link to={`/Carrito`}> <button onClick={agregarItem}>Agregar</button></Link>
                 
 
         </>

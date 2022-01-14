@@ -21,7 +21,7 @@ const ItemDetailContainer = ({productoss}) => {
         const promesa = new Promise(res =>{
             setTimeout(()=>{
                 res(productoss.find(prod=>prod.id===idd));
-            }, 2000);
+            }, 300);
         });
         promesa.then((prod) =>{
             setLista(prod);
