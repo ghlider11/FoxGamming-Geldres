@@ -38,13 +38,16 @@ const CustomProvider = ({children}) => {
             match.cantidad = match.cantidad + cantidad
             setCarrito(copia_del_carrito)
         } else {
+            // en producto_con_cantidad se almacena los datos del producto (item) y a ello agregarle un nuevo campo cantidad
             const producto_con_cantidad = {
                 ...item,
                 cantidad
             }
             setCarrito([...carrito, producto_con_cantidad])
+            
         }
         setCantidadTotal(cantidad_total + cantidad)
+        setPrecioTotal(precio_total + (item.price * cantidad))
 
 
             /* console.log(item,cantidad)
@@ -60,10 +63,14 @@ const CustomProvider = ({children}) => {
     }
     //BORRAR DEL CARRITO
 
-    const removeItem = (id,cantidad) => {
+    const removeItem = (id,cantidad,precio) => {
         let carritoFiltrado = carrito.filter(e => (e.id) !== id)
         setCarrito(carritoFiltrado)
+        console.log("carrito fltrado prueba: "+carritoFiltrado)
         setCantidadTotal(cantidad_total - cantidad)
+        setPrecioTotal(precio_total - (precio * cantidad))
+
+        
     }
 
     //LIMPIAR CARRITO
@@ -81,7 +88,8 @@ const CustomProvider = ({children}) => {
     //VALOR DEL CONTEXTO
 
     const valorDelContexto = {
-        cantidad_total , 
+        cantidad_total ,
+        precio_total, 
         carrito , 
         addItem , 
         removeItem ,
