@@ -11,12 +11,13 @@ const ItemDetail = ({ lista }) => {
     /*let [cantidad, setCantidad] = useState("")*/
     let [mostrar, setMostrar] = useState(false)
 
-    const { addItem} = useContexto()
+    const { addItem } = useContexto()
 
     const onAdd = (cantidad) => {
         
         console.log("cantidad de unidades " + cantidad)
         addItem(lista,cantidad)
+        console.log("cantidad de lista " + lista.description)
     }
 
     if (mostrar === false) {
@@ -24,6 +25,7 @@ const ItemDetail = ({ lista }) => {
             <>  
                 <article className={styles.detailtitle}>
                     <h3>DETALLE</h3>
+                    <h3>ID: {lista.id}</h3>
                     <h3>Nombre: {lista.description}</h3>
                     <h3>Precio: S/{lista.price}.00</h3>
                     <h3>Stock : {lista.stock}</h3>

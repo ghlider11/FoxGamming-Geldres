@@ -1,8 +1,10 @@
 import { NavLink } from "react-router-dom"
 import { useContexto } from "./Context/CartContext"
+import { addDoc, collection , serverTimestamp , updateDoc } from "firebase/firestore"
 
 const Carrito = () => {
     const { carrito, removeItem , clear, precio_total } = useContexto()
+    console.log("este es carrito con items"+carrito)
     const finalizarCompra = () => {
         console.log("Guardando la compra en la db...")
         clear()

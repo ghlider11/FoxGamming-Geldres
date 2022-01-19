@@ -3,21 +3,16 @@ import { useState, useEffect } from "react"
 import ItemList from "./ItemList";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom"
-const productosIniciales =
-{
-    id: 1,
-    title: 'Laptop',
-    description: 'LAPTOP 2-EN-1 ADVANCE CN4050',
-    price: 'S/.950.00',
-    pictureUrl: 'url',
-}
+import { db } from "../firebase";
+import { getDoc, doc, collection } from "firebase/firestore"
 
 const ItemDetailContainer = ({productoss}) => {
     let [lista, setLista] = useState([])
     let { idd } = useParams();
     console.log(idd);
 
-    const getItem = () =>{
+
+    /*const getItem = () =>{
         const promesa = new Promise(res =>{
             setTimeout(()=>{
                 res(productoss.find(prod=>prod.id===idd));
@@ -27,7 +22,19 @@ const ItemDetailContainer = ({productoss}) => {
             setLista(prod);
         })
     }
-    useEffect(() => getItem(), [idd])
+    useEffect(() => getItem(), [idd])*/
+    useEffect(() => {
+
+        const productosCollection = collection(db, "productos")
+        const refDoc = doc(productosCollection, idd)
+        getDoc(refDoc)
+            .then((resultado) => {
+                setLista(resultado.data())
+            })
+            .catch((error) => {
+
+            })
+    }, [idd])
     
     return (
         <div>

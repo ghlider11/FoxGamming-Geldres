@@ -29,8 +29,6 @@ const CustomProvider = ({children}) => {
     const [carrito,setCarrito] = useState([])
 
     const addItem = (item,cantidad) => {
-
-
         const id = item.id
         if (isInCart(id)) {
             const copia_del_carrito = [...carrito]
@@ -48,18 +46,6 @@ const CustomProvider = ({children}) => {
         }
         setCantidadTotal(cantidad_total + cantidad)
         setPrecioTotal(precio_total + (item.price * cantidad))
-
-
-            /* console.log(item,cantidad)
-             const id = producto.id
-
-                const copia_producto = {...item}
-                copia_producto.cantidad = cantidad
-
-      
-        setCarrito([...carrito,copia_producto])
-        setCantidadTotal(cantidad_total + cantidad)*/
-
     }
     //BORRAR DEL CARRITO
 
