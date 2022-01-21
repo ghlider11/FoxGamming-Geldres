@@ -25,11 +25,11 @@ const ItemDetail = ({ lista }) => {
             <>  
                 <article className={styles.detailtitle}>
                     <h3>DETALLE</h3>
-                    <h3>ID: {lista.id}</h3>
+                    <h3>ID: {lista.idd}</h3>
                     <h3>Nombre: {lista.description}</h3>
                     <h3>Precio: S/{lista.price}.00</h3>
                     <h3>Stock : {lista.stock}</h3>
-                    <img src={lista.pictureUrl} alt="thumbnail" />
+                    <img src={lista.pictureurl} alt="thumbnail" />
                    
     
                 </article>      

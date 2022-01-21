@@ -10,6 +10,8 @@ import Carrito from "./components/Carrito";
 import productoss from "./components/productoss.json"
 import CustomProvider, { Provider } from "./components/Context/CartContext";
 import { createContext } from "react";
+import Formulario from "./components/Items/Formulario";
+import Formulariox from "./components/Items/Formulariox";
 
 
 export const contextos =createContext({cantidad_total: 5, carrito : []})
@@ -193,6 +195,7 @@ function App() {
                         <Route path="/categoria/:nombre" element={<Itemlistcontainer greeting={"Bienvenido!"} productoss={productoss} />} />
                         <Route path="/carrito" element={<Carrito />} />
                         <Route path="/producto/:idd" element={<ItemDetailContainer productoss={productoss} />} />
+                        <Route path="/formulariox" element={<Formulariox />} />
                     </Routes>
                 </main>
                 <Footer />

@@ -7,10 +7,11 @@ import { db } from "../firebase";
 import { getDocs, query, collection , where } from "firebase/firestore"
 
 
-console.log(db)
+
 const onAdd = ()=>{
     console.log("Producto agregado")
 }
+
 
 
 const Itemlistcontainer = ({productoss},{gretting}) => {
@@ -18,16 +19,21 @@ const Itemlistcontainer = ({productoss},{gretting}) => {
     let [lista, setLista] = useState([])
     let { nombre } = useParams();
     console.log(nombre);
+  
 
     useEffect(()=>{
 
         const productosCollection = collection(db, "productos")
-        setTimeout(()=>{if (nombre) {
+        setTimeout(()=>{
+            if (nombre) {
 
             const consulta = query(productosCollection,where("categoria","==",nombre),where("price",">",100))
             /* await */ getDocs(consulta)
                 .then(({ docs }) => {
+                    console.log(docs)
                     setLista(docs.map((doc) => ({ id: doc.id, ...doc.data() })))
+                    console.log("e"+lista)
+                  
                 })
                 .catch((error) => {
                     console.log(error)
@@ -71,7 +77,7 @@ const Itemlistcontainer = ({productoss},{gretting}) => {
            
 
             </main>
-            <ItemList lista={lista}/>
+            <ItemList lista={lista} />
       
 
         </>

@@ -7,8 +7,9 @@ import { db } from "../firebase";
 import { getDoc, doc, collection } from "firebase/firestore"
 
 const ItemDetailContainer = ({productoss}) => {
-    let [lista, setLista] = useState([])
+    //let [lista, setLista] = useState([])
     let { idd } = useParams();
+    const [lista, setLista] = useState([])
     console.log(idd);
 
 
@@ -25,16 +26,19 @@ const ItemDetailContainer = ({productoss}) => {
     useEffect(() => getItem(), [idd])*/
     useEffect(() => {
 
-        const productosCollection = collection(db, "productos")
-        const refDoc = doc(productosCollection, idd)
-        getDoc(refDoc)
-            .then((resultado) => {
-                setLista(resultado.data())
-            })
-            .catch((error) => {
-
-            })
-    }, [idd])
+        const productsCollection = collection(db, "productos") 
+         const refDoc = doc(productsCollection, idd) 
+         getDoc(refDoc) 
+             .then((result) => { 
+                 const itemWithId = {...result.data(), idd} 
+                 setLista(itemWithId) 
+             }) 
+             .catch((error) => { 
+                 console.error(error) 
+             }) 
+  
+  
+     }, [idd]) 
     
     return (
         <div>

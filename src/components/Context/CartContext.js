@@ -29,10 +29,10 @@ const CustomProvider = ({children}) => {
     const [carrito,setCarrito] = useState([])
 
     const addItem = (item,cantidad) => {
-        const id = item.id
+        const id = item.idd
         if (isInCart(id)) {
             const copia_del_carrito = [...carrito]
-            let match = copia_del_carrito.find((p) => p.id === item.id)
+            let match = copia_del_carrito.find((p) => p.idd === item.idd)
             match.cantidad = match.cantidad + cantidad
             setCarrito(copia_del_carrito)
         } else {
@@ -50,7 +50,7 @@ const CustomProvider = ({children}) => {
     //BORRAR DEL CARRITO
 
     const removeItem = (id,cantidad,precio) => {
-        let carritoFiltrado = carrito.filter(e => (e.id) !== id)
+        let carritoFiltrado = carrito.filter(e => (e.idd) !== id)
         setCarrito(carritoFiltrado)
         console.log("carrito fltrado prueba: "+carritoFiltrado)
         setCantidadTotal(cantidad_total - cantidad)
@@ -68,7 +68,7 @@ const CustomProvider = ({children}) => {
     }
 
     const isInCart = (id) => {
-        return carrito.some((p) => p.id === id)
+        return carrito.some((p) => p.idd === id)
     }
 
     //VALOR DEL CONTEXTO
