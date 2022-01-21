@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom"
 
 const Formulariox = () => {
     const [name, setName] = useState("")
-    const [lastName, setLastName] = useState("")
+    const [telephone, setTelephone] = useState("")
     const [email, setEmail] = useState("")
     
     const {  clear } = useContexto()
@@ -19,8 +19,8 @@ const Formulariox = () => {
         setName(e.target.value)
     }
 
-    const onLastNameChanges = (e) => {
-        setLastName(e.target.value)
+    const onTelephoneChanges = (e) => {
+        setTelephone(e.target.value)
     }
 
     const onEmailChanges = (e) => {
@@ -28,7 +28,7 @@ const Formulariox = () => {
     }
 
     console.log(`name ahora es: ${name}`)
-    console.log(`lastName ahora es: ${lastName}`)
+    console.log(`telefono ahora es: ${telephone}`)
     console.log(`email ahora es: ${email}`)
     
     
@@ -65,8 +65,8 @@ const Formulariox = () => {
         <div>
             <label>Nombre</label>
             <input type="text" placeholder="nombre" onChange={onNameChanges}/>
-            <label>Apellidos</label>
-            <input type="text" placeholder="apellidos" onChange={onLastNameChanges} />
+            <label>Telefono</label>
+            <input type="text" placeholder="Telefono" onChange={onTelephoneChanges} />
             <label>Email</label>
             <input type="text" placeholder="email" onChange={onEmailChanges} />
             
