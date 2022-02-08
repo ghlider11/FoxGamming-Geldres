@@ -1,84 +1,53 @@
-import ItemCount from "./ItemCount"
-import { useState , useEffect } from "react"
+import { useState, useEffect } from "react"
 import ItemList from "./ItemList";
-import ItemDetailContainer from "./ItemDetailContainer";
 import { useParams } from "react-router-dom"
 import { db } from "../firebase";
-import { getDocs, query, collection , where } from "firebase/firestore"
+import { getDocs, query, collection, where } from "firebase/firestore"
 
-
-
-const onAdd = ()=>{
-    console.log("Producto agregado")
-}
-
-
-
-const Itemlistcontainer = ({productoss},{gretting}) => {
-
+const Itemlistcontainer = ({ productoss }, { gretting }) => {
     let [lista, setLista] = useState([])
     let { nombre } = useParams();
     console.log(nombre);
-  
-
-    useEffect(()=>{
+    useEffect(() => {
 
         const productosCollection = collection(db, "productos")
-        setTimeout(()=>{
+        setTimeout(() => {
             if (nombre) {
 
-            const consulta = query(productosCollection,where("categoria","==",nombre),where("price",">",100))
-            /* await */ getDocs(consulta)
-                .then(({ docs }) => {
-                    console.log(docs)
-                    setLista(docs.map((doc) => ({ id: doc.id, ...doc.data() })))
-                    console.log("e"+lista)
-                  
-                })
-                .catch((error) => {
-                    console.log(error)
-                })
+                const consulta = query(productosCollection, where("categoria", "==", nombre), where("price", ">", 100))
+                getDocs(consulta)
+                    .then(({ docs }) => {
+                        console.log(docs)
+                        setLista(docs.map((doc) => ({ id: doc.id, ...doc.data() })))
+                        console.log("e" + lista)
 
-        } else {
+                    })
+                    .catch((error) => {
+                        console.log(error)
+                    })
 
-            getDocs(productosCollection)
-                .then(({ docs }) => {
-                    setLista(docs.map((doc) => ({ id: doc.id, ...doc.data() })))
-                })
-                .catch((error) => {
-                    console.log(error)
-                })
-        }},500)
+            } else {
 
-        /*const promesa = new Promise((res)=>{
-            setTimeout(()=>{
-                if (nombre) {
-                    res(productoss.filter(prod => prod.title === nombre));
-                }else{
-                    res(productoss);
-                };
-                
-            },500)
-        });
-        promesa.then(prods => {
-            setLista(prods);
-        })*/
+                getDocs(productosCollection)
+                    .then(({ docs }) => {
+                        setLista(docs.map((doc) => ({ id: doc.id, ...doc.data() })))
+                    })
+                    .catch((error) => {
+                        console.log(error)
+                    })
+            }
+        }, 500)
 
-    },[nombre]);
+    }, );
 
 
     return (
         <>
 
-            <main>
-                
-               <p className="grett"> {gretting} </p>
-                
-           
-
-            </main>
-            <ItemList lista={lista} />
-      
+            <div className="productsContainer">
+                <h3 className="titleForContainers">Bienvenido(a)  a Fox Gamming</h3>
+                <ItemList lista={lista} />
+            </div>
 
         </>
     )

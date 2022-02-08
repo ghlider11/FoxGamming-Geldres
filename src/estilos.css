@@ -15,11 +15,12 @@ main.main{
   color: #ECF0F1;
 
 }
-#mainfo{
+main {
   padding: 1rem;
   flex-grow: 1;
   padding: 1rem;
 }
+
 p.contador{
   color:#ECF0F1;
 }
@@ -58,28 +59,73 @@ footer {
 #root {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+
 }
-/*
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-  }
+.productsContainer {
+  margin-top: 5vh;
+  text-align: center;
+}
+.titleForContainers {
+  color:#C9EEF5;
+  font-size: 2rem;
+  margin: 5vh;
+  text-align: center;
+}
+.cardContainer {
+  width: 100%;
+  height: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#card,
+#detailCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 40vh;
+  padding: 10px;
+  margin: 2.5vh;
+  margin-left: 4%;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #FFE10D;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+.headercolor{
+  color: aquamarine;
+ font-size: 2rem;
   
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color: #111;
-  }*/
+}
+.headercolor:hover{
+  color: deepskyblue;
+}
+
+#detailCard {
+  height: 65vh;
+}
+.cardTitle {
+  color: black;
+  font-size: 1.4rem;
+  margin-bottom: 4vh;
+}
+.cardInfo {
+  font-size: 1.1rem;
+  margin: 6px;
+  font-style: italic;
+}
+.cardPrice {
+  font-size: 1.4rem;
+  margin: 4vh;
+  font-style: bold;
+}
+.productImg {
+  width: 30%;
+  height: 80%;
+}
+.infoContainer {
+  width: 60%;
+}

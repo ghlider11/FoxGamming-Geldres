@@ -1,4 +1,4 @@
-import { Children, createContext, useContext, useState } from "react";
+import {  createContext, useContext, useState } from "react";
 
 /*const contexto = createContext({cantidad_total : 5 , carrito : [
 
@@ -81,10 +81,7 @@ const CustomProvider = ({children}) => {
         removeItem ,
         clear
     }
-    const totalDelCarrito = (item,cantidad,precio) => {
-        const copia_del_carrito = [...carrito]
-    }
-
+   
     return (
         <Provider value={valorDelContexto}>
             {children}

@@ -24,34 +24,6 @@ const Formulario = ({finalizarCompra}) => {
     console.log(`email ahora es: ${email}`)
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    /*const finalizarCompra = () => {
-        console.log("Guardando la compra en la db...")
-
-        const ventasCollection = collection(db, "ventas")
-        addDoc(ventasCollection,{
-            buyer : {
-                name : "Jefferson",
-                lastName : "Geldres",
-                email : "ghlider11@gmail.com"
-            },
-            items : carrito ,
-            date : serverTimestamp(),
-            total : 100
-        })
-        .then((resultado)=>{
-            console.log(resultado)
-            clear()
-        })
-    }*/
-
     return (
         <div>
             <label>Nombre</label>
