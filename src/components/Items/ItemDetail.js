@@ -1,13 +1,9 @@
 import ItemCount from "./ItemCount"
-/*import useStyles from './Items.styles'*/
 import { useState} from "react"
-
 import { useContexto } from "../Context/CartContext";
 
-
 const ItemDetail = ({ lista }) => {
-    /*const styles = useStyles()*/
-    /*let [cantidad, setCantidad] = useState("")*/
+
     let [mostrar] = useState(false)
 
     const { addItem } = useContexto()

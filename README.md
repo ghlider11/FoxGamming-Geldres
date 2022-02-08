@@ -17,6 +17,10 @@ Mi proyecto es sobre una pagina de ventas de computadoras y laptops. Fox Gamming
 - React Hook form
 - Css
 
+# Demostración
+
+ [link text](https://drive.google.com/file/d/1J7YPVLEQoPhiHAWvbuLZ_W73giKH7FXP/view?usp=sharing)
+
 # Autor
  
 Jefferson Geldres Huaycochea

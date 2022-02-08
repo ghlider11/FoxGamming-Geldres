@@ -1,6 +1,8 @@
 import { useContexto } from "../Context/CartContext"
 import { NavLink } from "react-router-dom"
 import { useForm } from "react-hook-form";
+import { Button,Form  } from 'react-bootstrap';
+
 
 const Formulariox = () => {
 
@@ -19,17 +21,23 @@ console.log(watch("example")); //
 
     return (
         <>
-         
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <label>Nombre</label>
-                <input type="text" placeholder="nombre" {...register("required", { required: true })} />
-                <label>Telefono</label>
-                <input type="text" placeholder="Telefono" {...register("required", { required: true })} />
-                <label>Email</label>
-                <input type="text" placeholder="email" {...register("required", { required: true })} />
+            <div class="row">
+            <div class="col-md-8">
+            <Form onSubmit={handleSubmit(onSubmit)}>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Nombre</Form.Label>
+                <Form.Control type="text" placeholder="nombre" {...register("required", { required: true })} />
+                <Form.Label>Telefono</Form.Label>
+                <Form.Control type="text" placeholder="Telefono" {...register("required", { required: true })} />
+                <Form.Label>Email</Form.Label>
+                <Form.Control type="text" placeholder="email" {...register("required", { required: true })} />
                 {errors.required && <span>Complete los campos solicitados</span>}
-                <NavLink to="/"><button type="submit" onClick={finalizarCompra}>Terminar comprar</button></NavLink>
-            </form>
+                
+                </Form.Group>
+                <NavLink to="/"><Button variant="success" type="submit" onClick={finalizarCompra}>Terminar comprar</Button></NavLink>
+            </Form>
+            </div>
+            </div>
         </>
 
     )

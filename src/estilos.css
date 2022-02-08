@@ -129,3 +129,30 @@ footer {
 .infoContainer {
   width: 60%;
 }
+#counterContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-top: 1vh;
+  height: 30%;
+  border-radius: 5px;
+}
+#itemCount {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.counter {
+  font-size: 1.4rem;
+}
+.addCart {
+  width: 50%;
+  margin-top: 1vh;
+  height: 5vh;
+  background-color: #004d7c;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1.4rem;
+}

@@ -1,9 +1,9 @@
 import React from "react"
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import "./ItemCount.css"
+import { Button } from 'react-bootstrap';
 
-const ItemCount = ({ stock, initial, onAdd,links, setCantidad, setMostrar }) => {
+const ItemCount = ({ stock, initial, onAdd, links, setCantidad, setMostrar }) => {
 
     let [contador, setContador] = useState(1)
 
@@ -22,11 +22,11 @@ const ItemCount = ({ stock, initial, onAdd,links, setCantidad, setMostrar }) => 
         if ((contador) > 1) {
             setContador(contador - 1)
         } else {
-            setContador(1) 
+            setContador(1)
         }
 
     }
-   
+
     const agregarItem = () => {
         console.log("Aca agrego un item con onAdd")
         setContador(initial)
@@ -36,14 +36,20 @@ const ItemCount = ({ stock, initial, onAdd,links, setCantidad, setMostrar }) => 
 
     return (
         <>
-            
-               <h4>{contador}</h4>
-                    <button onClick={sumar}>SUMAR</button>
-                
-                    <button onClick={restar}>RESTAR</button>
-               
-                    <Link to={`/Carrito`}> <button onClick={agregarItem}>Agregar</button></Link>
-                
+            <div id="counterContainer">
+
+                <div id="counterContainer">
+                    <Button variant="primary" onClick={restar}>-</Button>
+                    <p className="counter"> {contador} </p>
+                    <Button variant="primary" onClick={sumar}> + </Button>
+
+                </div>
+                <div>
+                    <Link to={`/Carrito`}> <Button variant="outline-primary" onClick={agregarItem}>Agregar</Button></Link>
+                </div>
+            </div>
+
+
         </>
 
     )
