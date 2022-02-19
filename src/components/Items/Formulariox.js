@@ -2,15 +2,33 @@ import { useContexto } from "../Context/CartContext"
 import { NavLink } from "react-router-dom"
 import { useForm } from "react-hook-form";
 import { Button,Form  } from 'react-bootstrap';
+import { addDoc, collection , serverTimestamp } from "firebase/firestore"
+import { db } from "../firebase";
 
 
-const Formulariox = () => {
+
+const Formulariox = ({carrito}) => {
 
 
     const { clear } = useContexto()
     const finalizarCompra = () => {
         console.log("Guardando la compra en la db...")
-        clear()
+        
+        const ventasCollection = collection(db, "ventas")
+        addDoc(ventasCollection,{
+            buyer : {
+                name : "Jefferson",
+                lastName : "Geldres",
+                email : "JeffersonGeldres@gmail.com"
+            },
+            items : carrito ,
+            date : serverTimestamp(),
+            total : 100
+        })
+        .then((resultado)=>{
+            clear()
+        })
+        
     }
 
 const { register, handleSubmit, watch, formState: { errors } } = useForm();

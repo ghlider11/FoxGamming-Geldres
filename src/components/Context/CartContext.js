@@ -64,6 +64,7 @@ const CustomProvider = ({children}) => {
     const clear = () => {  
         setCarrito([])
         setCantidadTotal(0)
+        setPrecioTotal(0);
 
     }
 
@@ -91,7 +92,3 @@ const CustomProvider = ({children}) => {
 
 export default CustomProvider
 
-
-/*export const useContexto = () =>{
-    return useContext(contexto)
-}*/

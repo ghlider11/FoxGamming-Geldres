@@ -9,7 +9,6 @@ import { useContexto } from "../Context/CartContext"
 const Header = ({  links }) => {
 
     const { cantidad_total } = useContexto()
-    console.log("AQUI EN HEADER HAY "+cantidad_total)
 
     return (
         <>

@@ -28,7 +28,7 @@ const ItemCount = ({ stock, initial, onAdd, links, setCantidad, setMostrar }) =>
     }
 
     const agregarItem = () => {
-        console.log("Aca agrego un item con onAdd")
+
         setContador(initial)
         onAdd(contador)
     }

@@ -7,7 +7,6 @@ import { getDocs, query, collection, where } from "firebase/firestore"
 const Itemlistcontainer = ({ productoss }, { gretting }) => {
     let [lista, setLista] = useState([])
     let { nombre } = useParams();
-    console.log(nombre);
     useEffect(() => {
 
         const productosCollection = collection(db, "productos")
